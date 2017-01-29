@@ -1,0 +1,34 @@
+<p>
+  home-component begin!
+</p>
+child1
+<app-child-component1>
+    <h2>Добро пожаловать из Homecomponent (ng-content_ng-content)</h2>
+    <h4>{{nameForComponent1}}  </h4>
+</app-child-component1>
+end child1
+
+<p></p>
+child2
+<app-child-component2 [userName]="nameForComponent2" [userAge]="ageForComponent2">>
+</app-child-component2>
+<input type="text" [(ngModel)]="nameForComponent2" />
+<p>end child2</p>
+
+<p></p>
+child3
+<app-child-component3 (onChanged)="onChanged($event)">
+</app-child-component3>
+<h2>Количество кликов: {{clicks}}</h2>
+end child3
+<p></p>
+child4
+<app-child-component4 [(userName)]="nameForComponent4">
+</app-child-component4>
+<div>Выбранное имя: {{nameForComponent4}}</div>
+
+end child4
+<p></p>
+<p>
+  home-component end!
+</p>
